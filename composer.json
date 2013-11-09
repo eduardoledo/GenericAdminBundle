@@ -1,10 +1,10 @@
 {
-    "name": "eduardoledo/GenericAdminBundle",
+    "name": "eduardoledo/generic-admin-bundle",
     "type": "symfony-bundle",
     "description": "A generic, easy to use CRUD generator for Symfony2",
-    "keywords": ["admin", "crud"],
+    "keywords": ["admin", "crud", "symfony2"],
     "homepage": "https://github.com/eduardoledo/GenericAdminBundle",
-    "license": "MIT",
+    "license": "unlicense",
     "authors": [
         {
             "name": "Eduardo Ledo",
