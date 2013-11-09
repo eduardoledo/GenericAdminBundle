@@ -1,0 +1,19 @@
+<!--  start paging..................................................... -->
+{% if current >= last %}
+    {% set next = last %}
+{% endif %}
+{% if current < last %}
+    {% set next = current + 1 %}
+{% endif %}
+{% if current >= 1 %}
+    {% set prev = 1 %}
+{% endif %}
+{% if current > 1 %}
+    {% set prev = current - 1 %}
+{% endif %}
+<a href="{{ url(route, {'page': 1}) }}" class="page-far-left"></a>
+<a href="{{ url(route, {'page': prev}) }}" class="page-left"></a>
+<div id="page-info">Page <strong>{{ current }}</strong> / {{ last }}</div>
+<a href="{{ url(route, {'page': next}) }}" class="page-right"></a>
+<a href="{{ url(route, {'page': last}) }}" class="page-far-right"></a>
+<!--  end paging................ -->

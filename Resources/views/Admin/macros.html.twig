@@ -1,0 +1,17 @@
+{% macro field_value(entity, field) %}
+    {% set type = field.type|default('string') %}
+    {% set value = attribute(entity, field.name) %}
+    {% set date_format = field.format|default('Y-m-d H:i:s') %}
+
+    {% if type == 'string' %}
+        {{ value }}
+    {% endif %}
+
+    {% if type == 'boolean' %}
+        <div class="button {{ value == 1 ? 'green' : 'red' }}"></div>
+    {% endif %}
+        
+    {% if type == 'datetime' %}
+        {{ value.format(date_format) }}
+    {% endif %}
+{% endmacro %}

@@ -1,0 +1,35 @@
+{% extends "LomaswifiAdminBundle:Admin:layout.html.twig" %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+
+{% form_theme form 'LomaswifiAdminBundle:Form:fields.html.twig' %}
+
+<form action="{{ path(url_create) }}" method="post" {{ form_enctype(form) }}>
+    <div id="step-holder">
+        <div class="step-no">1</div>
+        <div class="step-dark-left"><a href="">{{ title }}</a></div>
+        <div class="step-dark-round">&nbsp;</div>
+        <div class="clear"></div>
+    </div>
+    <table border="0" cellpadding="0" cellspacing="0" id="id-form">
+        <tbody>
+            {{ form_widget(form) }}
+            <tr>
+		<th>&nbsp;</th>
+                <td valign="top">
+                    <input type="submit" value="" class="form-submit">
+                    <input type="reset" value="" class="form-reset">
+                </td>
+                <td>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</form>
+
+
+{{ tinymce_init() }}
+
+{% endblock %}
