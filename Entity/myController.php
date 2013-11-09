@@ -7,8 +7,8 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Component\HttpFoundation\Session;
-use MakerLabs\PagerBundle\Pager;
-use MakerLabs\PagerBundle\Adapter\DoctrineOrmAdapter;
+use MakerLabs\Bundle\PagerBundle\Pager;
+use MakerLabs\Bundle\PagerBundle\Adapter\DoctrineOrmAdapter;
 
 class myController extends Controller
 {
