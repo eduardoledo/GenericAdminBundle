@@ -138,6 +138,6 @@ lomaswifi_admin:
 ```
 
 ### Next step
-If evrething went as planned you can now test the GenericBundleAdmin at `http://your_server_url/admin`.
+If everything went as planned you can now test the GenericBundleAdmin at `http://your_server_url/admin`.
 
 Enjoy
