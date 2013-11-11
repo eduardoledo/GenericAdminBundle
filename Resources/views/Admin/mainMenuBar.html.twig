@@ -1,6 +1,6 @@
 <div class="table">
 
-    <ul class="{% if app.session.hasFlash('selected_section') and app.session.getFlash('selected_section') == 'dashboard' %}current{% else %}select{% endif %}"><li><a href="{{ url('lomaswifi_admin_admin_home') }}"><b>Dashboard</b><!--[if IE 7]><!--></a><!--<![endif]-->
+    <ul class="{% if app.session.getFlashBag.has('selected_section') and app.session.getFlashBag.get('selected_section') == 'dashboard' %}current{% else %}select{% endif %}"><li><a href="{{ url('lomaswifi_admin_admin_home') }}"><b>Dashboard</b><!--[if IE 7]><!--></a><!--<![endif]-->
             <!--[if lte IE 6]><table><tr><td><![endif]-->
             <div class="select_sub">
                 <!--<ul class="sub">

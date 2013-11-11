@@ -366,12 +366,12 @@
                                 <table border="0" cellpadding="0" cellspacing="0" id="paging-table">
                                     <tr>
                                         <td>
-                                            {% if app.session.hasFlash('pager') %}
-                                                {% render controller('LomaswifiAdminBundle:Admin:pager', {'pager' : app.session.getFlash('pager')}) %}
+                                            {% if app.session.getFlashBag.has('pager') %}
+                                                {% render controller('LomaswifiAdminBundle:Admin:pager', {'pager' : app.session.getFlashBag.get('pager')}) %}
                                             {% endif %}
                                         </td>
                                         <td>
-                                            {% if app.session.hasFlash('show_rows_per_page') and app.session.getFlash('show_rows_per_page') %}
+                                            {% if app.session.getFlashBag.has('show_rows_per_page') and app.session.getFlashBag.get('show_rows_per_page') %}
                                                 <form id="frm_rows_per_page" method="POST" action="" enctype="application/x-www-form-urlencoded">
                                                     <select id="rows_per_page" name="rows_per_page" class="styledselect_pages">
                                                         <option value="-1">Number of rows</option>
