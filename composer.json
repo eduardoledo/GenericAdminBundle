@@ -18,7 +18,7 @@
     "require": {
         "php": ">=5.3.0",
         "friendsofsymfony/user-bundle": "*",
-        "makerlabs/pager-bundle": "@dev"
+        "makerlabs/pager-bundle": "*"
     },
     "autoload": {
         "psr-0": {
