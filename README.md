@@ -6,7 +6,7 @@ A generic, easy to use CRUD generator for Symfony2
 Prerequisites
 -------------
 
-This version of the bundle requires [FOSUserBundle](https://github.com/FriendsOfSymfony/FOSUserBundle) and [Makerlabs PagerBundle](https://github.com/makerlabs/PagerBundle).
+This version of the bundle requires [FOSUserBundle](https://github.com/FriendsOfSymfony/FOSUserBundle), [Makerlabs PagerBundle](https://github.com/makerlabs/PagerBundle) and [StfalconTinymceBundle](https://github.com/stfalcon/TinymceBundle).
 Both packages are installed automatically if not found.
 
 Installation
@@ -56,18 +56,18 @@ public function registerBundles()
 }
 ```
 
-If you did'n previusly installed FOSUserBundle and/or Makerlabs/PagerBundle you also have to enable them in the kernel which would look something like this:
+If you did'n previusly installed FOSUserBundle, Makerlabs/PagerBundle or StfalconTinymceBundle you also have to enable them in the kernel which would look something like this:
 
 ``` php
 <?php
 // app/AppKernel.php
-
 public function registerBundles()
 {
     $bundles = array(
         // ...
         new FOS\UserBundle\FOSUserBundle(),
         new MakerLabs\PagerBundle\MakerLabsPagerBundle(),
+        new Stfalcon\Bundle\TinymceBundle\StfalconTinymceBundle(),
         new Lomaswifi\AdminBundle\LomaswifiAdminBundle(),
     );
 }

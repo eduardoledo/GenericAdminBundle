@@ -18,7 +18,8 @@
     "require": {
         "php": ">=5.3.0",
         "friendsofsymfony/user-bundle": "*",
-        "makerlabs/pager-bundle": "*"
+        "makerlabs/pager-bundle": "*",
+        "stfalcon/tinymce-bundle": "*"
     },
     "autoload": {
         "psr-0": {

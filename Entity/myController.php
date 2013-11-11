@@ -62,7 +62,7 @@ class myController extends Controller
         }
 
         if (is_null($this->index_query) && !is_null($this->entity)) {
-            $em = $this->getDoctrine()->getEntityManager();
+            $em = $this->getDoctrine()->getManager();
             $this->index_query = $em->getRepository($this->entity)
                     ->createQueryBuilder('e');
         }
@@ -143,7 +143,7 @@ class myController extends Controller
             $form->bindRequest($request);
 
             if ($form->isValid()) {
-                $em = $this->getDoctrine()->getEntityManager();
+                $em = $this->getDoctrine()->getManager();
                 $em->persist($entity);
                 try {
                     $em->flush();
@@ -171,7 +171,7 @@ class myController extends Controller
         $this->loadConfig();
 
         if (!is_null($this->entity)) {
-            $em = $this->getDoctrine()->getEntityManager();
+            $em = $this->getDoctrine()->getManager();
 
             $entity = $em->getRepository($this->entity)->find($id);
 
@@ -203,7 +203,7 @@ class myController extends Controller
         $this->loadConfig();
 
         if (!is_null($this->entity)) {
-            $em = $this->getDoctrine()->getEntityManager();
+            $em = $this->getDoctrine()->getManager();
 
             $entity = $em->getRepository($this->entity)->find($id);
 
@@ -249,7 +249,7 @@ class myController extends Controller
             $form->bindRequest($request);
 
             if ($form->isValid()) {
-                $em = $this->getDoctrine()->getEntityManager();
+                $em = $this->getDoctrine()->getManager();
                 $entity = $em->getRepository($this->entity)->find($id);
 
                 if (!$entity) {
@@ -283,7 +283,7 @@ class myController extends Controller
             $this->fields = $section['fields'];
             $this->entity = $section['entity'];
 
-            $em = $this->getDoctrine()->getEntityManager();
+            $em = $this->getDoctrine()->getManager();
             $meta = $em->getClassMetadata($this->entity);
             $this->class_name = $meta->getName();
 
