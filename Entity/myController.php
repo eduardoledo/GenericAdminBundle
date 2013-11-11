@@ -81,14 +81,14 @@ class myController extends Controller
             $pager = new Pager($adapter, array('page' => $page, 'limit' => $rows_per_page));
 
             if ($pager->isPaginable()) {
-                $this->getSession()->setFlash('pager', array(
+                $this->getSession()->getFlashBag()->set('pager', array(
                     'current' => $page,
                     'last' => $pager->getLastPage(),
                     'route' => $route,
                     'rows_per_page' => $rows_per_page
                 ));
             }
-            $this->getSession()->setFlash('show_rows_per_page', $pager->hasResults());
+            $this->getSession()->getFlashBag()->set('show_rows_per_page', $pager->hasResults());
 
             return $this->render($this->index_template, array(
                         'pager' => $pager,
