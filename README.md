@@ -46,7 +46,6 @@ Enable the bundle in the kernel:
 ``` php
 <?php
 // app/AppKernel.php
-
 public function registerBundles()
 {
     $bundles = array(

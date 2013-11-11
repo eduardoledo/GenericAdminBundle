@@ -374,7 +374,7 @@
                                             {% if app.session.getFlashBag.has('show_rows_per_page') and app.session.getFlashBag.get('show_rows_per_page') %}
                                                 <form id="frm_rows_per_page" method="POST" action="" enctype="application/x-www-form-urlencoded">
                                                     <select id="rows_per_page" name="rows_per_page" class="styledselect_pages">
-                                                        <option value="-1">Number of rows</option>
+                                                        <option value="-1">{% trans %}Number of rows{% endtrans %}</option>
                                                         <option value="5">5{% if app.session.get('rows_per_page') == 5 %} <<{% endif %}</option>
                                                         <option value="8">8{% if app.session.get('rows_per_page') == 8 %} <<{% endif %}</option>
                                                         <option value="10">10{% if app.session.get('rows_per_page') == 10 %} <<{% endif %}</option>

@@ -2,7 +2,7 @@
 
 {% import "LomaswifiAdminBundle:Admin:macros.html.twig" as macros %}
 
-{% block title %}{{ title }}{% endblock %}
+{% block title %}{{ title|trans }}{% endblock %}
 
 {% block content %}
 
@@ -14,7 +14,7 @@
         <th class="table-header-check"><a id="toggle-all" ></a> </th>
         {% for field in fields %}
         <th class="table-header-repeat line-left minwidth-1">
-            <a href="">{{ field.label }}</a>
+            <a href="">{{ field.label|trans }}</a>
         </th>
         {% endfor %}
         <th class="table-header-options line-left"><a href="">Options</a></th>
@@ -26,15 +26,15 @@
                 <td>{{ macros.field_value(entity,field) }}</td>
             {% endfor %}
             <td class="options-width">
-                <a href="{{ path(url_edit, { 'id': entity.id }) }}" title="Edit" class="icon-1 info-tooltip"></a>
+                <a href="{{ path(url_edit, { 'id': entity.id }) }}" title="{% trans %}Edit{% endtrans %}" class="icon-1 info-tooltip"></a>
                 <form id="frmDelete_{{ entity.id }}" action="{{ path(url_delete, { 'id': entity.id }) }}" method="post">
                     {% set foo = delete_form.setData({ 'id': entity.id }) %}
                     {{ form_widget(delete_form.createView()) }}
-                    <a href="javascript:void(0);" onclick="$('#frmDelete_{{ entity.id }}').submit();" title="Delete" class="icon-2 info-tooltip"></a>
+                    <a href="javascript:void(0);" onclick="$('#frmDelete_{{ entity.id }}').submit();" title="{% trans %}Delete{% endtrans %}" class="icon-2 info-tooltip"></a>
                 </form>
             </td>
         </tr>
     {% endfor %}
 </table>
-<!--  end product-table................................... --> 
+<!--  end product-table................................... -->
 {% endblock %}

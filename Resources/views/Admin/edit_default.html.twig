@@ -1,6 +1,6 @@
 {% extends "LomaswifiAdminBundle:Admin:layout.html.twig" %}
 
-{% block title %}{{ title }}{% endblock %}
+{% block title %}{{ title|trans }}{% endblock %}
 
 {% block content %}
 
@@ -9,7 +9,7 @@
 <form action="{{ path(url_update, {'id': entity.id}) }}" method="post" {{ form_enctype(form) }}>
     <div id="step-holder">
         <div class="step-no">1</div>
-        <div class="step-dark-left"><a href="">{{ title }}</a></div>
+        <div class="step-dark-left"><a href="">{{ title|trans }}</a></div>
         <div class="step-dark-round">&nbsp;</div>
         <div class="clear"></div>
     </div>

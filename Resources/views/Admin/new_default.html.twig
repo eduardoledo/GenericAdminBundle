@@ -9,7 +9,7 @@
 <form action="{{ path(url_create) }}" method="post" {{ form_enctype(form) }}>
     <div id="step-holder">
         <div class="step-no">1</div>
-        <div class="step-dark-left"><a href="">{{ title }}</a></div>
+        <div class="step-dark-left"><a href="">{{ title|trans }}</a></div>
         <div class="step-dark-round">&nbsp;</div>
         <div class="clear"></div>
     </div>
