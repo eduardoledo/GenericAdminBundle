@@ -5,7 +5,6 @@
     "keywords": ["admin", "crud", "symfony2"],
     "homepage": "https://github.com/eduardoledo/GenericAdminBundle",
     "license": "unlicense",
-    "minimum-stability": "dev",
     "version":"1.0.0",
     "authors": [
         {
@@ -18,7 +17,7 @@
     "require": {
         "php": ">=5.3.0",
         "friendsofsymfony/user-bundle": "*",
-        "makerlabs/pager-bundle": "dev-master"
+        "makerlabs/pager-bundle": "@dev"
     },
     "autoload": {
         "psr-0": {
