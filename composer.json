@@ -5,6 +5,7 @@
     "keywords": ["admin", "crud", "symfony2"],
     "homepage": "https://github.com/eduardoledo/GenericAdminBundle",
     "license": "unlicense",
+    "minimum-stability": "beta",
     "version":"1.0.0",
     "authors": [
         {
